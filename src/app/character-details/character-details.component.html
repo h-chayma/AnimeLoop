@@ -1,0 +1,183 @@
+<section class="breadcrumb sec-mar">
+    <div class="container">
+        <div class="breadcrumb-content">
+            <ul>
+                <li><a routerLink="">Home</a></li>
+                <li><a routerLink="/characters">Characters</a></li>
+                <li><a class="active">{{ characterDetails.data.name }}</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="video sec-mar">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-12">
+                <div class="row">
+                    <div class="col-lg-6 col-md-7 col-12">
+                        <div class="trailer-box">
+                            <img src="{{ characterDetails.data.images.jpg.image_url }}" alt="" class="image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-5 col-12">
+                        <div class="trailer-content">
+                            <h2>{{ characterDetails.data.name }}</h2>
+                            <p class="light-text">{{ characterDetails.data.name_kanji }}</p>
+                            <h3>About Summary</h3>
+                            <p [innerHTML]="formatAboutText()"></p>
+                            <div class="d-flex pt-4">
+                                <button (click)="toggleShowMore()" class="anime-btn btn-dark border-change">
+                                    {{ showFullAbout ? 'See Less' : 'See More' }}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-12">
+                <div class="trailer-content">
+                    <h3>Manga Detail</h3>
+                    <p><span>Author:</span> <b>Bones</b></p>
+                    <p><span>Artist:</span> <b>Bones</b></p>
+                    <p><span>Date of release:</span> Jan 15, 2023</p>
+                    <p><span>Status:</span> <b>Completed</b></p>
+                    <p><span>Genre:</span> Action, School, Shounen</p>
+                    <p><span>Country:</span> Japan</p>
+                    <p><span>Scores:</span> 2.53 by 4,405 reviews</p>
+                    <p><span>Views:</span> 18,284</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="relese sec-mar">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-12 col-sm-12">
+                <h3 class="small-title">Manga Releases</h3>
+                <h5>Chapter 179 <span>Sunday 01 Jan 2023</span></h5>
+                <hr>
+                <h5>Chapter 178 <span>Sunday 02 Jan 2023</span></h5>
+                <hr>
+                <h5>Chapter 177 <span>Monday 03 Jan 2023</span></h5>
+                <hr>
+                <h5>Chapter 176 <span>Tuesday 04 Jan 2023</span></h5>
+                <hr>
+                <h5>Chapter 175 <span>Wednesday 05 Jan 2023</span></h5>
+                <hr>
+                <h5>Chapter 174 <span>Thursday 06 Jan 2023</span></h5>
+                <hr>
+                <h5>Chapter 173 <span>Friday 07 Jan 2023</span></h5>
+                <hr>
+                <h5>Chapter 172 <span>Saturday 08 Jan 2023</span></h5>
+                <hr>
+                <h5>Chapter 171 <span>Sunday 09 Jan 2023</span></h5>
+                <hr>
+                <h5>Chapter 170 <span>Monday 10 Jan 2023</span></h5>
+                <hr>
+                <h5>Chapter 169 <span>Tuesday 11 Jan 2023</span></h5>
+                <hr>
+                <div class="text-center">
+                    <a href="#" class="relese-btn">Show More</a>
+                </div>
+                <hr>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-8 offset-lg-0 offset-md-3 offset-sm-2 mt-lg-0 mt-3">
+                <h3 class="small-title">Top Rated Manga</h3>
+                <div class="anime-box bg-color-black">
+                    <a href="manga-detail.html">
+                        <div class="row m-0">
+                            <div class="p-0 col-4">
+                                <img src="assets/media/manga-sm-img/manga-img-7.png" alt="">
+                            </div>
+                            <div class="p-0 col-8">
+                                <div class="anime-blog">
+                                    <p>86</p>
+                                    <p class="text">Chapter 129</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="anime-box bg-color-black">
+                    <a href="manga-detail.html">
+                        <div class="row m-0">
+                            <div class="p-0 col-4">
+                                <img src="assets/media/manga-sm-img/manga-img-8.png" alt="">
+                            </div>
+                            <div class="p-0 col-8">
+                                <div class="anime-blog">
+                                    <p>Re-Zero</p>
+                                    <p class="text">Chapter 169</p>
+                                    <p class="ms-2 me-0 text-box active">18+</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="anime-box bg-color-black">
+                    <a href="manga-detail.html">
+                        <div class="row m-0">
+                            <div class="p-0 col-4">
+                                <img src="assets/media/manga-sm-img/manga-img-9.png" alt="">
+                            </div>
+                            <div class="p-0 col-8">
+                                <div class="anime-blog">
+                                    <p>Tokyo Ghoul</p>
+                                    <p class="text">Chapter 279</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="anime-box bg-color-black">
+                    <a href="manga-detail.html">
+                        <div class="row m-0">
+                            <div class="p-0 col-4">
+                                <img src="assets/media/manga-sm-img/manga-img-10.png" alt="">
+                            </div>
+                            <div class="p-0 col-8">
+                                <div class="anime-blog">
+                                    <p>Sword Art Online</p>
+                                    <p class="text">Chapter 223</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="anime-box bg-color-black">
+                    <a href="manga-detail.html">
+                        <div class="row m-0">
+                            <div class="p-0 col-4">
+                                <img src="assets/media/manga-sm-img/manga-img-11.png" alt="">
+                            </div>
+                            <div class="p-0 col-8">
+                                <div class="anime-blog">
+                                    <p>Sword Art Online: Alicization</p>
+                                    <p class="text">Chapter 94</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="anime-box bg-color-black">
+                    <a href="manga-detail.html">
+                        <div class="row m-0">
+                            <div class="p-0 col-4">
+                                <img src="assets/media/manga-sm-img/manga-img-12.png" alt="">
+                            </div>
+                            <div class="p-0 col-8">
+                                <div class="anime-blog">
+                                    <p>One Piece</p>
+                                    <p class="text">Chapter 1016</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

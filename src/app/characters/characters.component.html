@@ -1,0 +1,63 @@
+<section class="breadcrumb">
+    <div class="container">
+        <div class="breadcrumb-content">
+            <ul>
+                <li><a routerLink="">Home</a></li>
+                <li><a class="active">Anime List</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="filter sec-mar">
+    <div class="container">
+        <div class="heading style-1">
+            <h2>Characters <span> Showing 1 – 25 Characters</span></h2>
+        </div>
+    </div>
+</section>
+
+<section class="anime sec-mar">
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let character of characters.data" class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                <div class="anime-blog">
+                    <a [routerLink]="'/character/' + character.mal_id" class="img-block">
+                        <img src="{{ character.images.jpg.image_url }}" alt="">
+                    </a>
+                    <a [routerLink]="'/character/' + character.mal_id" class="action-overlay"><i
+                            class="fal fa-info-circle"></i> Deatils</a>
+                    <a [routerLink]="'/character/' + character.mal_id">
+                        <p>{{ character.name }}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="pagination-wrape">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a href="#" class="page-link arrow" aria-label="Previous">
+                        <i class="fa fa-chevron-left"></i>
+                    </a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link current">1</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">2</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">3</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link">4</a>
+                </li>
+                <li class="page-item">
+                    <a href="#" class="page-link arrow" aria-label="next">
+                        <i class="fa fa-chevron-right"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
